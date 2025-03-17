@@ -1,0 +1,157 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Resale Platform</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url("patten.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+           
+        }
+        header {
+            background: linear-gradient(to right, #ff4161, #ff6e2b);
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 ;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: url('event-banner.jpg') no-repeat center center/cover;
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            animation: slideUp 1.5s ease-in-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .btn {
+            background: #ff416c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .btn:hover {
+            background: #ff4b2b;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .ticket-list {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .ticket {
+            display: flex;
+            justify-content: space-between;
+            background: #f8f8f8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+            animation: slideUp 1s ease-in-out;
+        }
+        .ticket:hover {
+            background: #e8e8e8;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell Ticket</a></li>
+                <li><a href="buy.html">Buy Ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Second-Hand Event Ticket Resale</h1>
+            <p>Buy and sell unwanted tickets easily</p>
+            <button class="btn" onclick="location.href='buy.html'">Buy Tickets</button>
+            <button class="btn" onclick="location.href='sell.html'">Sell Tickets</button>
+        </div>
+    </section>
+</body>
+</html>
